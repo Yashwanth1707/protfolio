@@ -116,7 +116,7 @@ const Footer = () => {
                 transition={{ duration: 1, repeat: Infinity }}
               >
                 <FaHeart className="inline" />
-              </motion.span> and React
+              </motion.span> by Yashwanth
             </motion.p>
           </div>
         </div>

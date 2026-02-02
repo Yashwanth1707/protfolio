@@ -11,10 +11,10 @@ const Projects = () => {
     {
       type: "website",
       icon: <FaGlobe size={32} />,
-      title: "BSAAirTravels.com",
+      title: "bsaairtravels.com",
       description: "A comprehensive travel website featuring responsive UI, intuitive enquiry flow, and seamless booking experience. Built to handle high traffic and provide excellent user experience.",
-      technologies: ["React", "Tailwind CSS", "Node.js", "MongoDB"],
-      link: null,
+      technologies: ["React", "Tailwind CSS", "Node.js", "SQL-Server"],
+      link: "https://bsaairtravels.com",
       highlights: ["Responsive Design", "Enquiry Management", "Real-time Availability"]
     },
     {
@@ -23,7 +23,7 @@ const Projects = () => {
       title: "Bhairava Enterprises",
       description: "Product showcase website for a retail trading business. Features elegant design, product galleries, and contact integration for business inquiries.",
       technologies: ["React", "CSS", "JavaScript"],
-      link: "https://enterprize-project.vercel.app/",
+      link: null,
       highlights: ["Product Showcase", "Business Profile", "Contact Integration"]
     },
     {
