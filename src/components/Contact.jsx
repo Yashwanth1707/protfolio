@@ -101,36 +101,61 @@ const Contact = () => {
 
             <motion.div
               variants={itemVariants}
-              className="bg-gradient-to-br from-primary-500 to-secondary-500 rounded-3xl p-12 text-center text-white shadow-2xl"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="relative overflow-hidden rounded-3xl p-12 text-center text-white shadow-2xl 
+             bg-gradient-to-br from-primary-500 via-purple-500 to-secondary-500"
             >
-              <h3 className="text-3xl font-bold mb-4">
-                Ready to Start a Project?
-              </h3>
-              <p className="text-xl mb-8 opacity-90">
-                I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <motion.a
-                  href="mailto:Yashwanthgunam@gmail.com"
-                  className="px-8 py-4 bg-white text-primary-600 rounded-full font-semibold shadow-lg hover:shadow-xl transition-shadow"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Send an Email
-                </motion.a>
-                <motion.a
-                  href="https://wa.me/917259274400"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-8 py-4 bg-green-500 text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-shadow flex items-center gap-2"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <FaWhatsapp size={20} />
-                  WhatsApp Me
-                </motion.a>
+              {/* Decorative blur blobs */}
+              <div className="absolute -top-20 -left-20 w-64 h-64 bg-white/20 rounded-full blur-3xl" />
+              <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-black/20 rounded-full blur-3xl" />
+
+              <div className="relative z-10">
+                <h3 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+                  Let’s Build Something
+                  <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-white">
+                    Amazing Together
+                  </span>
+                </h3>
+
+                <p className="text-lg md:text-xl mb-10 opacity-90 max-w-2xl mx-auto">
+                  I’m always excited to collaborate on new projects, creative ideas,
+                  or opportunities to bring your vision to life with clean and scalable solutions.
+                </p>
+
+                <div className="flex flex-wrap justify-center gap-6">
+                  {/* Email Button */}
+                  <motion.a
+                    href="mailto:Yashwanthgunam@gmail.com"
+                    className="group relative px-8 py-4 bg-white text-primary-600 rounded-full font-semibold 
+                   shadow-lg overflow-hidden"
+                    whileHover={{ scale: 1.08 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <span className="relative z-10">📩 Send an Email</span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-primary-100 to-primary-200 
+                         opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </motion.a>
+
+                  {/* WhatsApp Button */}
+                  <motion.a
+                    href="https://wa.me/917259274400"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative px-8 py-4 bg-green-500 text-white rounded-full font-semibold 
+                   shadow-lg flex items-center gap-3 overflow-hidden"
+                    whileHover={{ scale: 1.08 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <FaWhatsapp size={22} />
+                    <span className="relative z-10">WhatsApp Me</span>
+                    <span className="absolute inset-0 bg-green-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </motion.a>
+                </div>
               </div>
             </motion.div>
+
           </div>
         </motion.div>
       </div>
